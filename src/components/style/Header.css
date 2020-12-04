@@ -1,0 +1,76 @@
+.Header{
+    width: 100%;
+    height: 80px;
+    background-color:rgb(221 221 221 / 14%);
+    border-top-right-radius: 20px;
+    border-top-left-radius : 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    width: 15%;
+    padding: 10px;
+}
+.logo img{
+    width: 100%;
+    height: 100%;
+}
+.select-time{
+    width: 70%;
+    text-align: center;
+    padding-top: 25px;
+}
+.select-time select{
+    width: 80%;
+    padding: 10px;
+    border:none;
+    border-radius: 5px;
+}
+.select-time select:focus{
+    outline: none;
+}
+.mode{
+    width: 15%;
+    padding-top: 25px;
+    padding-left: 40px;
+}
+.toggle input[type=checkbox] {
+	display: none;
+}
+
+.toggle label {
+	background-color:rgb(12, 12, 12);
+	border: 2px solid #555;
+	border-radius: 50px;
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: all ease-in-out 0.3s;
+	width: 90px;
+	height: 40px;
+}
+
+.toggle label::after {
+	background-color:rgba(255, 255, 255, 0.918);     
+	border-radius: 50%;
+	content: ' ';
+	cursor: pointer;
+	display: inline-block;
+	position: absolute;
+	left: 2px;
+    top: 2px;
+    right: 2px;
+	transition: all ease-in-out 0.3s;
+	width: 32px;
+	height: 32px;
+}
+
+
+.toggle input[type=checkbox]:checked ~ label {
+	background-color:rgb(253, 253, 253);
+}
+
+.toggle input[type=checkbox]:checked ~ label::after {
+	background-color:rgba(12, 12, 12, 0.918);
+	transform: translateX(50px);
+}
