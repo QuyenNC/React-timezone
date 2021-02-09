@@ -20,10 +20,8 @@ function App() {
   const [darkMode,setDarkMode] = useState('off');
   const timeZonesList = momentTZ.tz.names();
   const onChangeSelect = (e) =>{
-    let timeZoneArr = timeZoneLists;
-    if(timeZoneArr.indexOf(e.target.value) === -1){
-      timeZoneArr.push(e.target.value);
-      setTimeZoneLists([...timeZoneArr]);
+    if(timeZoneLists.indexOf(e.target.value) === -1){
+      setTimeZoneLists([...timeZoneLists, e.target.value]);
     }else{
       return message.error('TimeZone had already');
     }
