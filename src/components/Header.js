@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
-import './style/Header.css';
-import Logo from './image/logo.png';
+import "./style/Header.css";
+import Logo from "./image/logo.png";
 
 function Header(props) {
   const { timZonesList, onChange, onDark, darkMode } = props;
@@ -12,14 +12,22 @@ function Header(props) {
       </div>
       <div className="select-time">
         <select onChange={onChange}>
-          {timZonesList.map((item , index) => (
-            <option key={index} value={item}>{item}</option>
+          {timZonesList.map((item, index) => (
+            <option key={index} value={item}>
+              {item}
+            </option>
           ))}
         </select>
       </div>
       <div className="mode">
         <div className="toggle">
-          <input type="checkbox" id="toggle" value={darkMode} onChange={onDark} defaultChecked  />
+          <input
+            type="checkbox"
+            id="toggle"
+            value={darkMode}
+            onChange={onDark}
+            defaultChecked
+          />
           <label htmlFor="toggle"></label>
         </div>
       </div>
